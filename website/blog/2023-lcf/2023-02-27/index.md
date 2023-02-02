@@ -1,6 +1,6 @@
 ---
-slug: 2023-day10
-title: 10. Create Power Platform custom connectors using Azure API Management and Authorizations
+slug: 2023-day27
+title: 27. Create Power Platform custom connectors using Azure API Management and Authorizations
 authors: [julia]
 draft: true
 hide_table_of_contents: false
@@ -23,9 +23,9 @@ tags: [low-code-february, 28-days-of-lowcode, learn-live, zero-to-hero, ask-the-
   <link rel="canonical" href="https://microsoft.github.io/Low-Code/blog/2023-day10" />
 </head>
 
-Welcome to `Day 10` of #28DaysOfLowCode!
+Welcome to `Day 27` of #28DaysOfLowCode!
 
-The theme for this week is **backend**. We talked about how we can provide extra security to our web APIs using Azure API Management. In this section, we will talk about our new feature in Azure API Management called [Authorizations](https://learn.microsoft.com/en-us/azure/api-management/authorizations-overview) and how this can elevate your low-code journey with web APIs.
+Introducing a new feature in Azure API Management and showcasing the new capabilities together with the Microsoft Power Platform. We talked about how we can provide extra security to our web APIs using Azure API Management. In this section, we will talk about our new feature in Azure API Management called [Authorizations](https://learn.microsoft.com/en-us/azure/api-management/authorizations-overview) and how this can elevate your low-code journey with web APIs.
 
 ## What We'll Cover
 
