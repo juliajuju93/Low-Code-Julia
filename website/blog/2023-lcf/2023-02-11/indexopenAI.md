@@ -29,15 +29,15 @@ The theme for this week is **OpenAI and Microsoft Power Platform**. Over the pas
 
 ## What We'll Cover
 
- * [What is OpenAI]()
- * [Scenario - Power Apps integration with GitHub and API Management Authorizations]()
- * [Scenario Overview]()
- * [Prerequisites]()
- * [Step 1: Add OpenAI's API into your Azure API Management instance]()
- * [Step 2: Configure a policy in Azure API Management]()
- * [Step 3: Create a custom connector via Azure API Management]()
- * [Step 4: Create a custom connector for the Microsoft Power Platform using API Management]()
- * [Step 5: Call your web API via your Power App]()
+ * [What is OpenAI](#what-is-openai)
+ * [Scenario - Power Apps integration with GitHub and API Management Authorizations](#scenario---power-apps-integration-with-openai-and-azure-api-management)
+ * [Scenario Overview](#scenario---power-apps-integration-with-openai-and-azure-api-management)
+ * [Prerequisites](#prerequisites)
+ * [Step 1: Add OpenAI's API into your Azure API Management instance](#step-1-add-openais-api-into-your-azure-api-management-instance)
+ * [Step 2: Configure a policy in Azure API Management](#step-2-configure-a-policy-in-azure-api-management)
+ * [Step 3: Create a custom connector via Azure API Management](#step-3-create-a-custom-connector-via-azure-api-management)
+ * [Step 4: Call your web API via your Power App](#step-4-call-your-web-api-via-your-power-app)
+ * [Resources](#resources)
 
 <!-- FIXME: banner image -->
 ![Empty Banner Placeholder](../../../static/img/banner.png)
