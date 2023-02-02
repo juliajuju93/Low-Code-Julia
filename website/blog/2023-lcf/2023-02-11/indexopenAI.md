@@ -8,7 +8,7 @@ toc_min_heading_level: 2
 toc_max_heading_level: 3
 keywords: [power-platform, custom-connector, api-management, apim, authn, openAI, GPT, dalle, natural-language, ai]
 image: ../../static/img/banner.png
-description: "Throughout this post, let's discuss how developers can leverage OpenAI's APIs to build next-gen application using Microsoft Power Apps. We will use the DALL·E 2 (a new AI system) model to create realistic images and art from a description in natural language." 
+description: "Throughout this post, let's discuss how developers can leverage OpenAI's APIs to build next-gen application using Microsoft Power Apps. We will use the DALL·E 2 (a new AI system) model to create realistic images and art from a text description in natural language." 
 tags: [low-code-february, 28-days-of-lowcode, learn-live, zero-to-hero, ask-the-expert, fusion-teams, power-platform]
 ---
 
@@ -25,7 +25,7 @@ tags: [low-code-february, 28-days-of-lowcode, learn-live, zero-to-hero, ask-the-
 
 Welcome to `Day 11` of #28DaysOfLowCode!
 
-The theme for this week is **OpenAI and Microsoft Power Platform**. Over the past few weeks, social-media feeds and newsletters have been filled with stories and conversations about artificial intelligence (AI). ChatGPT and OpenAI were often center of these conversations and today we will take a look at an exciting OpenAI and Power Platform scenario. We will discuss how developers can leverage OpenAI's APIs to build next-gen application using Microsoft Power Apps. For our scenario, we will use DALL·E 2 (a new AI system model) to create realistic images and art from a description in natural language.
+The theme for this week is **OpenAI and Microsoft Power Platform**. Over the past few weeks, social-media feeds and newsletters have been filled with stories and conversations about artificial intelligence (AI). ChatGPT and OpenAI were often center of these conversations and today we will take a look at an exciting OpenAI and Power Platform scenario. We will discuss how developers can leverage OpenAI's APIs to build next-gen application using Microsoft Power Apps. For our scenario, we will use DALL·E 2 (a new AI system model) to create realistic images and art from a text description in natural language.
 
 ## What We'll Cover
 
@@ -33,9 +33,9 @@ The theme for this week is **OpenAI and Microsoft Power Platform**. Over the pas
  * [Scenario - Power Apps integration with GitHub and API Management Authorizations]()
  * [Scenario Overview]()
  * [Prerequisites]()
- * [Step 1: Register an application in GitHub for your organization]()
- * [Step 2: Configure an authorization in API Management]()
- * [Step 3: Create an API in API Management and configure a policy]()
+ * [Step 1: Add OpenAI's API into your Azure API Management instance]()
+ * [Step 2: Configure a policy in Azure API Management]()
+ * [Step 3: Create a custom connector via Azure API Management]()
  * [Step 4: Create a custom connector for the Microsoft Power Platform using API Management]()
  * [Step 5: Call your web API via your Power App]()
 
@@ -49,15 +49,15 @@ The theme for this week is **OpenAI and Microsoft Power Platform**. Over the pas
 
 ## What is OpenAI
 
-OpenAI is an AI research and deployment company. Developers can use OpenAI's APIs to build applications using their different trained [models](https://platform.openai.com/docs/models/models). They offer a spectrum of models with different levels of understanding or generating natural language or code. These models can be used for everything from content generation to semantic search and classification. Their currently most popular model is [GPT-3](https://platform.openai.com/docs/models/gpt-3) that can understand and generate natural language. For today's scenario, we will use [DALL·E 2](https://openai.com/blog/dall-e/) (a new AI system model) to create realistic images and art from a description in natural language.
+OpenAI is an AI research and deployment company. Developers can use OpenAI's APIs and build applications using their different trained [models](https://platform.openai.com/docs/models/models). OpenAI offers a spectrum of models with different levels of understanding or generating natural language or code. These models can be used for everything from content generation to semantic search and classification. Their current most popular model is [GPT-3](https://platform.openai.com/docs/models/gpt-3) that can understand and generate natural language. For today's scenario, we will use [DALL·E 2](https://openai.com/blog/dall-e/) (a new AI system model) to create realistic images and art from a text description in natural language.
 
-> *Note: Like GPT-3, DALL·E is a transformer language model. DALL·E is a 12-billion parameter version of GPT-3 trained to generate images from text descriptions, using a dataset of text–image pairs*
+> *Note: Like GPT-3, DALL·E is a transformer language model. DALL·E is a 12-billion parameter version of GPT-3 trained to generate images from text descriptions, using a dataset of text–image pairs.*
 
 ## Scenario - Power Apps integration with OpenAI and Azure API Management
 
 ### Scenario Overview
 
-We want to build a Power App and leverage OpenAI's trained model DALL·E 2 to create a realistic image from only a text description. All of this can be done by just a simple API call for [image creation](https://platform.openai.com/docs/api-reference/images/create). We will use [Azure API Management](https://learn.microsoft.com/en-us/azure/api-management/api-management-key-concepts) to help us securely expose OpenAI's API to the Microsoft Power Platform.
+We want to build a Power App and leverage OpenAI's trained model DALL·E 2 to create a realistic image from only a text description. All of this can be done by just a simple API call for OpenAI's [image creation](https://platform.openai.com/docs/api-reference/images/create). We will use [Azure API Management](https://learn.microsoft.com/en-us/azure/api-management/api-management-key-concepts) to help us securely expose OpenAI's API to the Microsoft Power Platform.
 
 ### Prerequisites
 - A running API Management instance. Complete the following [Quickstart: Create a new Azure API Management service instance by using the Azure portal](https://learn.microsoft.com/en-us/azure/api-management/get-started-create-service-instance).
@@ -88,7 +88,7 @@ We want to build a Power App and leverage OpenAI's trained model DALL·E 2 to cr
 5. Select your newly created operation and edit **Frontend**.
 <img src="media/editfrontend.png" width="500">
 
-6. Next, we need to add a **Request Body** to your API. For this, within your Frontend section scroll down and select **Request**. Now **Add representation** and insert the following information:
+6. Next, we need to add a **Request Body** to our API. For this, within our Frontend section scroll down and select **Request**. Now **Add representation** and insert the following information:
 
   | Representations  |  |
   | ------------- | ------------- |
@@ -159,7 +159,7 @@ Next, we want to integrate our newly create custom connector in our Power App an
 
 <img src="media/customconnectorpower.png" width="400">
 
-2. Next, we modify our **Generate Picture** Button with the following PowerFX formular:
+2. Next, we modify our **Generate Picture** Button with the following PowerFX formula:
 
 ```
 ClearCollect(_datacollection, OpenAIAPI.createimage({prompt:TextInput1.Text,n:1,size:"512x512"}).data); 
@@ -168,7 +168,7 @@ Reset(TextInput1)
 
 ![powerappsinput](media/powerappsinput1.png)
 
-3. Next, we modify our **Image2** with the following PowerFX formular:
+3. Next, we modify our **Image2** with the following PowerFX formula:
 
 ```
 $"{First(_datacollection).url}"
@@ -176,12 +176,12 @@ $"{First(_datacollection).url}"
 
 ![powerappsinput](media/powerappsinput2.png)
 
-4. Now, you are able to test your Power App and create a picture via your text input parameters. This picture will be generated using OpenAI's DALL·E model. Enjoy generating some fun pictures!
+4. Now, you are able to test your Power App and create a picture via your text input parameters. This picture will be generated using OpenAI's DALL·E model. Enjoy generating some fun pictures like me:
 
 
-> Feedback about this tutorial, let us know what you think! @juliajuju93
+> Let us know what you think! [@Julia Kasper](https://www.linkedin.com/in/jukasper/)
 
-> Don't forget to check out our session during [Powerful Dev 2023](https://aka.ms/PowerfulDevsConf2023)
+> Don't forget to check out our live session on this topic on Februar 15th - [Sign up now - Powerful Dev 2023](https://aka.ms/PowerfulDevsConf2023)
 
 ## Resources
 
