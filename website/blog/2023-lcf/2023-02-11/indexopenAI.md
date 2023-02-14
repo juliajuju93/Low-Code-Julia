@@ -61,7 +61,7 @@ We want to build a Power App and leverage OpenAI's trained model DALL·E 2 to cr
 
 ### Azure API Management
 
-Web APIs have experienced an exponential increase in popularity and usage in the past few years. APIs exist at the intersection of business, products, and technologies and have transformed the way businesses interact with each other and the way they provide value to their customers. The need for organizations to securely manage, deploy, monitor and share APIs has increased as well. Azure API Management helps to create consistent and modern API gateways for existing back-end services hosted anywhere, secure and protect them from abuse and overuse, and get insights into usage and health. Organizations can use API Management to securely publish APIs to external and internal customers. This service 
+Web APIs have experienced an exponential increase in popularity and usage in the past few years. APIs exist at the intersection of business, products, and technologies and have transformed the way businesses interact with each other and the way they provide value to their customers. The need for organizations to securely manage, deploy, monitor and share APIs has increased as well. Azure API Management helps to create consistent and modern API gateways for existing back-end services hosted anywhere, secure and protect them from abuse and overuse, and get insights into usage and health.
 
 ### Prerequisites
 - A running API Management instance. Complete the following [Quickstart: Create a new Azure API Management service instance by using the Azure portal](https://learn.microsoft.com/en-us/azure/api-management/get-started-create-service-instance).
