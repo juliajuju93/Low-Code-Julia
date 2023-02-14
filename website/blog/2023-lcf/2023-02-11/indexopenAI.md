@@ -185,7 +185,7 @@ $"{First(_datacollection).url}"
 
 > Let us know what you think! [@Julia Kasper](https://www.linkedin.com/in/jukasper/)
 
-> Don't forget to check out our live session on this topic on Februar 15th - [Sign up now - Powerful Dev 2023](https://aka.ms/PowerfulDevsConf2023)
+> Don't forget to [Sign up for the Powerful Dev 2023](https://aka.ms/PowerfulDevsConf2023)!
 
 ## Resources
 
