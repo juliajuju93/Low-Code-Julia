@@ -25,7 +25,7 @@ tags: [low-code-february, 28-days-of-lowcode, learn-live, zero-to-hero, ask-the-
 
 Welcome to `Day 27` of #28DaysOfLowCode!
 
-Introducing a new feature in Azure API Management and showcasing the new capabilities together with the Microsoft Power Platform. We talked about how we can provide extra [security to our web APIs using Azure API Management](https://microsoft.github.io/Low-Code/blog/2023-day10). In this section, we will talk about the [Authorizations](https://learn.microsoft.com/en-us/azure/api-management/authorizations-overview) feature in Azure API Management and how this can elevate your low-code journey with web APIs.
+Introducing [Authorizations](https://learn.microsoft.com/en-us/azure/api-management/authorizations-overview) in Azure API Management and showcasing its capabilities together with the Microsoft Power Platform. Last time, we talked about how we can provide extra [security to our web APIs using Azure API Management](https://microsoft.github.io/Low-Code/blog/2023-day10). In this section, we will talk about the [Authorizations](https://learn.microsoft.com/en-us/azure/api-management/authorizations-overview) feature in Azure API Management and how this can elevate your low-code journey with web APIs.
 
 ## What We'll Cover
 
@@ -234,4 +234,4 @@ githubdiscussion.postdiscussioncomment({body:TextInputFeedback.Text}); Reset(Tex
 3. Now, you are able to test your Power App and create a new comment in your GitHub team's discussion.
 
 
->Enjoy this fun little tutorial and let us know what you think! @juliajuju93
+>Enjoy this fun little tutorial and let us know what you think! [@jukasper](https://www.linkedin.com/in/jukasper/)
