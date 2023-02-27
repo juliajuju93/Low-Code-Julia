@@ -25,7 +25,7 @@ tags: [low-code-february, 28-days-of-lowcode, learn-live, zero-to-hero, ask-the-
 
 Welcome to `Day 27` of #28DaysOfLowCode!
 
-Introducing a new feature in Azure API Management and showcasing the new capabilities together with the Microsoft Power Platform. We talked about how we can provide extra security to our web APIs using Azure API Management. In this section, we will talk about our new feature in Azure API Management called [Authorizations](https://learn.microsoft.com/en-us/azure/api-management/authorizations-overview) and how this can elevate your low-code journey with web APIs.
+Introducing a new feature in Azure API Management and showcasing the new capabilities together with the Microsoft Power Platform. We talked about how we can provide extra [security to our web APIs using Azure API Management](https://microsoft.github.io/Low-Code/blog/2023-day10). In this section, we will talk about the [Authorizations](https://learn.microsoft.com/en-us/azure/api-management/authorizations-overview) feature in Azure API Management and how this can elevate your low-code journey with web APIs.
 
 ## What We'll Cover
 
@@ -217,7 +217,7 @@ If you want to add additional security to your API, check out our blog post on [
 
 ### Step 5: Call your web API via your Power App
 
-Next, we want to make an API call within your Power. You can import our [GitHub Comment - Power App](powerapp) sample app, please follow instructions on [Importing a canvas app package](https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/export-import-app#importing-a-canvas-app-package).
+Next, we want to make an API call within your Power App. For this, we created a very simple Power App as our front-end with a **Send** Button and a **TextInput** field.
 
 1. In your Power App, add your custom connector to your Power App via the tab **data > + Add data**.
 
